@@ -1,0 +1,61 @@
+﻿<Window x:Class="MatheQuiz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MatheQuiz"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800"  Background="CornflowerBlue">
+    <Grid>
+        <Label Content="Mathe Quiz" HorizontalAlignment="Left" Margin="40,10,0,0" VerticalAlignment="Top" 
+               FontSize="48" Foreground="Black" FontWeight="Bold"/>
+        <GroupBox Name="groupBox" Header="Select Difficulty" HorizontalAlignment="Left" 
+                  VerticalAlignment="Top" Margin="545,45,0,0" Height="250" Width="180" Foreground="White" 
+                  FontSize="20"  Background="CornflowerBlue" FontWeight="Bold"/>
+        <RadioButton Name="rbEasy" Content="Easy" HorizontalAlignment="Left" Margin="570,105,0,0" 
+                     VerticalAlignment="Top" Foreground="GreenYellow" FontSize="24"  Width="130" 
+                     FontWeight="Bold" IsChecked="True"/>
+        <RadioButton Name="rbMedium" Content="Medium" HorizontalAlignment="Left" Margin="570,160,0,0" 
+                     VerticalAlignment="Top" Foreground="Orange" FontSize="24" FontWeight="Bold" Width="130"/>
+        <RadioButton Name="rbHard" Content="Hard" HorizontalAlignment="Left" Margin="571,221,0,0" 
+                     VerticalAlignment="Top" Foreground="Red" FontSize="24" FontWeight="Bold" Width="129"/>
+        <Button Name="btnStart" Content="Start Quiz" HorizontalAlignment="Left" Margin="545,430,0,0" 
+                VerticalAlignment="Top" Width="135" FontSize="24" FontWeight="Bold" Click="Button_Click"/>
+
+        <ComboBox Name="comboBox1" HorizontalAlignment="Left" Margin="545,360,0,0" VerticalAlignment="Top" 
+                  Width="120" Height="40" FontWeight="Bold" FontSize="20" >
+            <ComboBoxItem Content="10" IsSelected="True"/>
+            <ComboBoxItem Content="20"/>
+            <ComboBoxItem Content="30"/>
+            <ComboBoxItem Content="40"/>
+            <ComboBoxItem Content="50"/>
+        </ComboBox>
+        
+        <Label Name="lblNumberOfQuestions" Content="Number Of Questions" HorizontalAlignment="Left" 
+               Margin="535,315,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" 
+               Foreground="Black"/>
+        <Label Name="lbQuizStatus" Content="" HorizontalAlignment="Left" Margin="50,140,0,0" 
+               VerticalAlignment="Top" FontSize="30" FontWeight="Bold" Background="White"  
+               Foreground="Black" Visibility="Hidden"/>
+        <Label Name="lblQuestion" Content="" HorizontalAlignment="Left" Margin="50,225,0,0" 
+               VerticalAlignment="Top" FontSize="30" FontWeight="Bold" Background="White"  
+               Foreground="Black" Visibility="Hidden"/>
+        <TextBox Name="tbAnswer" HorizontalAlignment="Left" Height="45" Margin="85,335,0,0" 
+                 TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="145" FontSize="30" 
+                 FontWeight="ExtraBold" Background="White"  Foreground="Black" BorderThickness="2,2,2,2" 
+                 Visibility="Hidden" AcceptsReturn="True" TabIndex="0" TextAlignment="Center" 
+                 PreviewTextInput="NumberValidationTextBox"/>
+        <Button Name="btnAnswer" HorizontalAlignment="Left" Height="43" Margin="85,405,0,0" 
+                VerticalAlignment="Top" Width="145" FontSize="30" FontWeight="Bold" Foreground="Black" 
+                Visibility="Hidden" Click="BtnAnswer_Click" IsDefault="True">Ok</Button>
+        <Label Name="lblNumberCorrect" Content="Correct 0" HorizontalAlignment="Left" Margin="300,335,0,0" 
+               VerticalAlignment="Top" FontSize="30" FontWeight="Bold" Background="Black"  
+               Foreground="GreenYellow" Visibility="Hidden" />
+        <Label Name="lblNumberWrong" Content="Wrong 0" HorizontalAlignment="Left" Margin="300,405,0,0" 
+               VerticalAlignment="Top" FontSize="30" FontWeight="Bold" Background="Black"  
+               Foreground="Red" Visibility="Hidden" />
+        <Button Name="btnPlayAgain" Content="Play Again" HorizontalAlignment="Left" Margin="525,425,0,0" 
+                VerticalAlignment="Top" Width="175" Height="50" FontSize="30" FontWeight="Bold" 
+                Foreground="Black" Visibility="Hidden" Click="PlayAgain_Click"/>        
+    </Grid>
+</Window>
